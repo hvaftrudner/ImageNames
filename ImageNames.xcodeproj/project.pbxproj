@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E031A30726348D7700F3C31F /* PictureDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E031A30626348D7700F3C31F /* PictureDetailView.swift */; };
 		E04B90C026330FF400A0B4A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04B90BF26330FF400A0B4A6 /* AppDelegate.swift */; };
 		E04B90C226330FF400A0B4A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04B90C126330FF400A0B4A6 /* SceneDelegate.swift */; };
 		E04B90C426330FF400A0B4A6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04B90C326330FF400A0B4A6 /* ContentView.swift */; };
@@ -14,9 +15,12 @@
 		E04B90C926330FF500A0B4A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E04B90C826330FF500A0B4A6 /* Assets.xcassets */; };
 		E04B90CC26330FF500A0B4A6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E04B90CB26330FF500A0B4A6 /* Preview Assets.xcassets */; };
 		E04B90CF26330FF500A0B4A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E04B90CD26330FF500A0B4A6 /* LaunchScreen.storyboard */; };
+		E04B90D82633110400A0B4A6 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04B90D72633110400A0B4A6 /* ImagePicker.swift */; };
+		E04B90DB263311D600A0B4A6 /* PictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04B90DA263311D600A0B4A6 /* PictureView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E031A30626348D7700F3C31F /* PictureDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureDetailView.swift; sourceTree = "<group>"; };
 		E04B90BC26330FF400A0B4A6 /* ImageNames.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageNames.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E04B90BF26330FF400A0B4A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E04B90C126330FF400A0B4A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +30,8 @@
 		E04B90CB26330FF500A0B4A6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E04B90CE26330FF500A0B4A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E04B90D026330FF500A0B4A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E04B90D72633110400A0B4A6 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		E04B90DA263311D600A0B4A6 /* PictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,9 @@
 				E04B90BF26330FF400A0B4A6 /* AppDelegate.swift */,
 				E04B90C126330FF400A0B4A6 /* SceneDelegate.swift */,
 				E04B90C326330FF400A0B4A6 /* ContentView.swift */,
+				E031A30626348D7700F3C31F /* PictureDetailView.swift */,
+				E04B90DA263311D600A0B4A6 /* PictureView.swift */,
+				E04B90D72633110400A0B4A6 /* ImagePicker.swift */,
 				E04B90C826330FF500A0B4A6 /* Assets.xcassets */,
 				E04B90CD26330FF500A0B4A6 /* LaunchScreen.storyboard */,
 				E04B90D026330FF500A0B4A6 /* Info.plist */,
@@ -150,7 +159,10 @@
 			files = (
 				E04B90C026330FF400A0B4A6 /* AppDelegate.swift in Sources */,
 				E04B90C226330FF400A0B4A6 /* SceneDelegate.swift in Sources */,
+				E04B90D82633110400A0B4A6 /* ImagePicker.swift in Sources */,
+				E04B90DB263311D600A0B4A6 /* PictureView.swift in Sources */,
 				E04B90C726330FF400A0B4A6 /* ImageNames.xcdatamodeld in Sources */,
+				E031A30726348D7700F3C31F /* PictureDetailView.swift in Sources */,
 				E04B90C426330FF400A0B4A6 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
