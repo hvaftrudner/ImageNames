@@ -6,30 +6,74 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct PictureDetailView: View {
     
     @State var picture: Picture
     
+    //mapview And Location
+    @State private var centerCoordinate = CLLocationCoordinate2D()
+    @State private var locations = [CodableMKPointAnnotation]()
+    @State private var selectedPlace: MKPointAnnotation?
+    @State private var showingPlaceDetails = false
+    
+
     var body: some View {
         ZStack{
+            //add geo for better window solution/ fit all screens
             VStack{
+                Text(picture.name ?? "")
+                    .padding()
+                    .font(.largeTitle)
+                    .frame(width: 280, height: 40, alignment: .center)
+                    .border(Color.black, width: 2)
+                
+                Spacer()
                 
                 self.loadUserImage(uuid: picture.pictureId!)
                     .resizable()
                     .scaledToFit()
-                    .padding()
+                    .border(Color.black, width: 2)
                 
                 Spacer()
                 
-                Text(picture.name ?? "")
-                    .padding()
-                    .font(.largeTitle)
+                ZStack{
+                    
+                    MapView(centerCoordinate: $centerCoordinate, annotations: locations, selectedPlace: $selectedPlace, showingPlaceDetails: $showingPlaceDetails)
+                    Circle()
+                        .fill(Color.red)
+                        .opacity(0.2)
+                        .frame(width: 10, height: 10)
+                }
+                .border(Color.black, width: 2)
                 
-                Spacer()
+                
             }
         }
+        .onAppear(perform: {
+            self.populateMapView()
+        })
     }
+    
+    func populateMapView(){
+        
+        guard picture == picture else { return }
+        
+        self.centerCoordinate = CLLocationCoordinate2D(latitude: picture.latitude, longitude: picture.longitude)
+        print(centerCoordinate)
+        
+        let newLocation = CodableMKPointAnnotation()
+        newLocation.title = "New location"
+        newLocation.coordinate = self.centerCoordinate
+        self.locations.append(newLocation)
+                    
+        self.selectedPlace = newLocation
+
+        //self.showingEditScreen = true
+        
+    }
+    
     func getDocumentsDirectory() -> URL{
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         return paths[0]

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CoreLocation
 
 struct ContentView: View {
     
@@ -19,6 +20,9 @@ struct ContentView: View {
     @FetchRequest(entity: Picture.entity(), sortDescriptors: [NSSortDescriptor(key: "name", ascending: true)]) var Pictures : FetchedResults<Picture>
     
     @State private var showingAddPicture = false
+    
+    //adding mapview and location
+    let locationFetcher = LocationFetcher()
     
     var body: some View {
         
@@ -54,8 +58,12 @@ struct ContentView: View {
                     .foregroundColor(Color.black)
             })
             .sheet(isPresented: $showingAddPicture){
-                PictureView()
+                PictureView(locationFetcher: self.locationFetcher)
             }
+            .onAppear(perform: {
+                self.locationFetcher.start()
+                print("Starting to track location")
+            })
         }
     }
     

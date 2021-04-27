@@ -7,6 +7,7 @@
 
 import SwiftUI
 import CoreImage
+import MapKit
 
 struct PictureView: View {
     
@@ -24,6 +25,8 @@ struct PictureView: View {
     @State private var pictureName = ""
     
     @State private var isShowingFailAlert = false
+    
+    @State var locationFetcher: LocationFetcher
     
     var body: some View {
         NavigationView{
@@ -62,6 +65,16 @@ struct PictureView: View {
                             let pictureID = newPicture.pictureId
                             newPicture.name = self.pictureName
                             
+                            if let location = self.locationFetcher.lastKnownLocation {
+                                //Set location to object here
+                                newPicture.latitude = location.latitude
+                                newPicture.longitude = location.longitude
+                            } else {
+                                //no known location
+                                print("no location found")
+                            }
+                            
+                            
                             //saving photo to disk here
                             try? self.moc.save()
                             self.saveImageToDisk(image: newImage!, name: pictureID?.uuidString ?? "")
@@ -83,6 +96,7 @@ struct PictureView: View {
             )
         }
     }
+   
     
     func loadImage(){
         guard let newImage = newImage else {return}
@@ -105,8 +119,8 @@ struct PictureView: View {
     }
 }
 
-struct PictureView_Previews: PreviewProvider {
-    static var previews: some View {
-        PictureView()
-    }
-}
+//struct PictureView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        PictureView()
+//    }
+//}

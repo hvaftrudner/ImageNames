@@ -17,6 +17,10 @@
 		E04B90CF26330FF500A0B4A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E04B90CD26330FF500A0B4A6 /* LaunchScreen.storyboard */; };
 		E04B90D82633110400A0B4A6 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04B90D72633110400A0B4A6 /* ImagePicker.swift */; };
 		E04B90DB263311D600A0B4A6 /* PictureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04B90DA263311D600A0B4A6 /* PictureView.swift */; };
+		E0A58BC926385D6000F4C408 /* MKPointAnnotation-Object.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0A58BC826385D6000F4C408 /* MKPointAnnotation-Object.swift */; };
+		E0D329232638567F00F38ADC /* LocationFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D329222638567F00F38ADC /* LocationFetcher.swift */; };
+		E0D329262638577400F38ADC /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D329252638577400F38ADC /* MapView.swift */; };
+		E0D32929263857E200F38ADC /* MKPointAnnotationCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0D32928263857E200F38ADC /* MKPointAnnotationCodable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		E04B90D026330FF500A0B4A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E04B90D72633110400A0B4A6 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		E04B90DA263311D600A0B4A6 /* PictureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureView.swift; sourceTree = "<group>"; };
+		E0A58BC826385D6000F4C408 /* MKPointAnnotation-Object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKPointAnnotation-Object.swift"; sourceTree = "<group>"; };
+		E0D329222638567F00F38ADC /* LocationFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationFetcher.swift; sourceTree = "<group>"; };
+		E0D329252638577400F38ADC /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		E0D32928263857E200F38ADC /* MKPointAnnotationCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MKPointAnnotationCodable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,7 +75,11 @@
 				E04B90BF26330FF400A0B4A6 /* AppDelegate.swift */,
 				E04B90C126330FF400A0B4A6 /* SceneDelegate.swift */,
 				E04B90C326330FF400A0B4A6 /* ContentView.swift */,
+				E0D329222638567F00F38ADC /* LocationFetcher.swift */,
 				E031A30626348D7700F3C31F /* PictureDetailView.swift */,
+				E0D32928263857E200F38ADC /* MKPointAnnotationCodable.swift */,
+				E0A58BC826385D6000F4C408 /* MKPointAnnotation-Object.swift */,
+				E0D329252638577400F38ADC /* MapView.swift */,
 				E04B90DA263311D600A0B4A6 /* PictureView.swift */,
 				E04B90D72633110400A0B4A6 /* ImagePicker.swift */,
 				E04B90C826330FF500A0B4A6 /* Assets.xcassets */,
@@ -157,12 +169,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0D32929263857E200F38ADC /* MKPointAnnotationCodable.swift in Sources */,
 				E04B90C026330FF400A0B4A6 /* AppDelegate.swift in Sources */,
+				E0A58BC926385D6000F4C408 /* MKPointAnnotation-Object.swift in Sources */,
 				E04B90C226330FF400A0B4A6 /* SceneDelegate.swift in Sources */,
+				E0D329232638567F00F38ADC /* LocationFetcher.swift in Sources */,
 				E04B90D82633110400A0B4A6 /* ImagePicker.swift in Sources */,
 				E04B90DB263311D600A0B4A6 /* PictureView.swift in Sources */,
 				E04B90C726330FF400A0B4A6 /* ImageNames.xcdatamodeld in Sources */,
 				E031A30726348D7700F3C31F /* PictureDetailView.swift in Sources */,
+				E0D329262638577400F38ADC /* MapView.swift in Sources */,
 				E04B90C426330FF400A0B4A6 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
